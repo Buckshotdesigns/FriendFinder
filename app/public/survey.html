@@ -152,9 +152,14 @@
 
     $.ajax({url: "api/friends", method: "GET"})
     .done(function(res){
-       
+       var differenceArray = [];
         for (i = 0; i < res.length -1; i++ ) {
             console.log(res[i].scores);
+            for(j = 0; j < 10; j++) {
+                var friendsDifference = newFriend.scores[j] - res[i].scores[j];
+                differenceArray.push(Math.abs(friendsDifference));
+                console.log(differenceArray);
+            }
         }
     });
 

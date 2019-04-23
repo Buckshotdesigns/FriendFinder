@@ -1,5 +1,5 @@
 
-var friends = [
+var friendList = [
     {
         "name": "johnny Bravo",
         "photo": "https://i.ytimg.com/vi/yihzTVTvmR0/maxresdefault.jpg",
@@ -54,7 +54,7 @@ var friends = [
         "scores": [
             2,
             3,
-            1,
+            5,
             4,
             5,
             1,
@@ -70,7 +70,7 @@ var friends = [
         "scores": [
             1,
             2,
-            3,
+            5,
             4,
             5,
             1,
@@ -83,4 +83,4 @@ var friends = [
 
 ];
 
-module.export = friends;
+module.export = friendList;

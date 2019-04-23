@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
 </head>
 <body>
     <div class = "container">
@@ -121,8 +122,33 @@
             <button type="button" class="btn btn-lg btn-primary mt-5 mb-5" id="submit">Submit to find out which friend you'll be matched with!</button>
         </div>
         <hr>
-        
-
     </div>
 </body>
+
 </html>
+
+<script type="text/javascript">
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
+        // Here we grab the form elements
+        var numberArray = [];
+        for (i = 0; i < 11; i++) {
+            numberArray.push(parseInt($("#x" + i).val()));
+        };
+        console.log(numberArray);
+        var newFriend = {
+            name: $("#name").val().trim(),
+            photo:$("#photo").val().trim(),
+            scores: numberArray
+        };
+        console.log(newFriend);
+   
+
+    $.post("/api/friends", newFriend,
+        function(data) {
+            console.log("hi");
+        }
+    );
+
+});
+    </script>

@@ -132,10 +132,10 @@
         event.preventDefault();
         // Here we grab the form elements
         var numberArray = [];
-        for (i = 0; i < 11; i++) {
-            numberArray.push(parseInt($("#x" + i).val()));
+        for (i = 1; i < 11; i++) {
+            numberArray.push($("#x" + i).val());
         };
-        console.log(numberArray);
+       
         var newFriend = {
             name: $("#name").val().trim(),
             photo:$("#photo").val().trim(),
@@ -149,6 +149,14 @@
             console.log(data);
         }
     );
+
+    $.ajax({url: "api/friends", method: "GET"})
+    .done(function(res){
+       
+        for (i = 0; i < res.length -1; i++ ) {
+            console.log(res[i].scores);
+        }
+    });
 
 });
     </script>

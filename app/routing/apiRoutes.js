@@ -9,8 +9,16 @@ module.exports = function(app) {
       });
     
       app.post("/api/friends", function(req, res) {
-        var info = (req.body);
-        friendList.push(info);
+        var scoresArray = [];
+        var newFriend = {
+            name: req.body.name,
+            photo: req.body.photo,
+            scores: scoresArray
+        };
+        for (i = 0; i < req.body.scores.length; i++) {
+            scoresArray.push(parseInt(req.body.scores[i]))
+        }
+        friendList.push(newFriend);
       })
 
 };

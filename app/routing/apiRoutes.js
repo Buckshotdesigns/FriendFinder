@@ -1,6 +1,6 @@
 
 var friendList = require("../data/friends.js");
-var path = require("path");
+path = require("path");
 
 module.exports = function(app) {
 

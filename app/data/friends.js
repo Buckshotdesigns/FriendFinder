@@ -9,8 +9,8 @@ var friends = [
             3,
             3,
             4,
-            2,
-            3,
+            5,
+            1,
             4,
             1,
             5
@@ -22,19 +22,19 @@ var friends = [
         "scores": [
             2,
             3,
-            5,
             1,
-            4,
             1,
             5,
+            1,
+            5,
             4,
-            3,
+            5,
             1
         ]
     },
     {
         "name": "Fred",
-        "photo": "https://vignette.wikia.nocookie.net/hanna-barbera/images/6/6a/Fred_Jones.gif/revision/latest?cb=20110130105112",
+        "photo": "https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/scooby-fred.jpg",
         "scores": [
             4,
             5,
@@ -42,15 +42,15 @@ var friends = [
             2,
             1,
             5,
-            4,
-            2,
+            5,
             1,
+            5,
             1
         ]
     },
     {
         "name": "Leela",
-        "photo": "https://cdn.pixabay.com/photo/2018/10/19/06/21/turanga-leela-3757930_960_720.png",
+        "photo": "https://www.syfy.com/sites/syfy/files/styles/1140x640/public/cast_futurama_turangaleela_0.jpg?timestamp=1508358104",
         "scores": [
             2,
             3,
@@ -69,13 +69,13 @@ var friends = [
         "photo": "https://theinfosphere.org/images/1/14/Bender_promo_2.jpg",
         "scores": [
             1,
-            2,
             5,
-            4,
+            5,
             5,
             1,
+            1,
             2,
-            3,
+            5,
             4,
             5
         ]

@@ -134,8 +134,8 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <h4 class="modal-title"></h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                 </div>
@@ -154,6 +154,13 @@
 
 <script type="text/javascript">
     $("#submit").on("click", function(event) {
+       if ($("#name").val().trim() === "") {
+           alert("Please enter a valid name");
+       }
+       else if ($("#photo").val().trim() === ""){
+           alert("Please enter a link for a photo");
+       } else
+       {
         event.preventDefault();
         var numberArray = [];
         for (i = 1; i < 11; i++) {
@@ -201,15 +208,17 @@
         
         };
         console.log("ive been clicked")
-        var friendName = '<h4>' + bestFriend.name + '<h4>';
-        var friendPic = '<img width="300px" src=' + bestFriend.photo + '>';
+        var friendName = "<h4>" + bestFriend.name + "<h4>";
+        var friendPic = "<img width='300px' src=" + bestFriend.photo + ">";
                     
-        $('#friend-modal').modal('show');
-        $('#friend-modal h4').html(friendName);
-        $('.modal-body').html(friendPic);
+        $("#friend-modal").modal("show");
+        $(".modal-title").html(friendName);
+        $(".modal-body").html(friendPic);
                   
-                    
+         
     });
+}
+    return false;
 });
 
 </script>

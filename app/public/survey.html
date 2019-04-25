@@ -7,6 +7,9 @@
     <title>Survey</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     
 </head>
 <body>
@@ -125,25 +128,23 @@
         <hr>
     </div>
     <!-- Modal content -->
-    <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal fade" id="friend-modal" role="dialog">
         <div class="modal-dialog">
-        
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title"></h4>
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
             </div>
-            <div class="modal-body">
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-          
+
         </div>
-      </div>
-      
     </div>
     
     
@@ -199,12 +200,13 @@
             }
         
         };
+        console.log("ive been clicked")
         var friendName = '<h4>' + bestFriend.name + '<h4>';
-                    var friendPic = '<img width="300px" src=' + bestFriend.photo + '>';
+        var friendPic = '<img width="300px" src=' + bestFriend.photo + '>';
                     
-                    $('#my-modal').modal('show');
-                    $('#my-modal h4').html(friendName);
-                    $('.modal-body').html(friendPic);
+        $('#friend-modal').modal('show');
+        $('#friend-modal h4').html(friendName);
+        $('.modal-body').html(friendPic);
                   
                     
     });

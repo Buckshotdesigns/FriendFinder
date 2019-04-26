@@ -16,6 +16,7 @@
     <div class = "container">
         <h2>Survey Questions</h2>
         <hr>
+        <form role="form" id="survey">
         <h3>About You</h3>
             <h4>Name (Required)</h4>
             <input type="text" id="name" class="form-control" required>
@@ -24,7 +25,7 @@
         <hr>
         <h3>Question 1</h3>
             <h4>You have a strong fascination with being a cartoon</h4>
-                <select class="chosen-select" id="x1">
+                <select class="form-contol" id="x1">
                 <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -34,7 +35,7 @@
                 </select>
         <h3>Question 2</h3>
             <h4>You often have dreams about having a cartoon side kick</h4>
-                <select class="chosen-select" id="x2">
+                <select class="form-contol" id="x2">
                 <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -44,7 +45,7 @@
                 </select>
         <h3>Question 3</h3>
             <h4>You dream about futuristic places where robots drink heavily</h4>
-                <select class="chosen-select" id="x3">
+                <select class="form-contol" id="x3">
                 <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -54,7 +55,7 @@
                 </select>
         <h3>Question 4</h3>
             <h4>You have always wanted to steal a space ship</h4>
-                <select class="chosen-select" id="x4">
+                <select class="form-control" id="x4">
                 <option value></option>
                     <option value="1">1 (Strongly Disagree)</option>
                     <option value="2">2</option>
@@ -64,7 +65,7 @@
                 </select>
         <h3>Question 5</h3>
             <h4>You are always hungry</h4>
-                <select class="chosen-select" id="x5">
+                <select class="form-control" id="x5">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -74,7 +75,7 @@
             </select>
         <h3>Question 6</h3>
             <h4>Your hair must be perfect at all times</h4>
-                <select class="chosen-select" id="x6">
+                <select class="form-control" id="x6">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -84,7 +85,7 @@
             </select>
         <h3>Question 7</h3>
             <h4>You can talk to dogs on the regular</h4>
-                <select class="chosen-select" id="x7">
+                <select class="form-control" id="x7">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -94,7 +95,7 @@
             </select>
         <h3>Question 8</h3>
             <h4>Felonies are a natural part of life</h4>
-                <select class="chosen-select" id="x8">
+                <select class="form-control" id="x8">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -104,7 +105,7 @@
             </select>
         <h3>Question 9</h3>
             <h4>You believe that all people wear masks and disguises to do evil deeds</h4>
-                <select class="chosen-select" id="x9">
+                <select class="form-control" id="x9">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -114,7 +115,7 @@
             </select> 
         <h3>Question 10</h3>
             <h4>You believe that you are constantly stuck in the matrix and want somebody to come save you</h4>
-                <select class="chosen-select" id="x10">
+                <select class="form-control" id="x10">
                 <option value></option>
                 <option value="1">1 (Strongly Disagree)</option>
                 <option value="2">2</option>
@@ -127,6 +128,7 @@
         </div>
         <hr>
     </div>
+</form>
     <!-- Modal content -->
     <div class="modal fade" id="friend-modal" role="dialog">
         <div class="modal-dialog">
@@ -214,6 +216,7 @@
         $("#friend-modal").modal("show");
         $(".modal-title").html(friendName);
         $(".modal-body").html(friendPic);
+        $('#survey')[0].reset();
                   
          
     });
